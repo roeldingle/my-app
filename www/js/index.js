@@ -59,3 +59,46 @@ function showPopup(){
     var text = document.getElementById("txt_sample").value;
     alert(text);
 }
+
+
+function callWebService(){
+
+    //create request url
+    //var url = "http://localhost/phonegapProjects/webservice/my-app.php";
+    var url = "http://api.straightarrowasset.com/sportsace/api/v1/training_statistics";
+
+    // Log
+    console.log("Request string: " + url);
+    
+    $.ajaxSetup( {beforeSend: function(jqXHR) {
+        jqXHR.setRequestHeader( "X-Auth-Token", "MC45NzQ2MzIwMCAxNDMyMTg4NzA3LTItdVVyQ3FUNzhXbUoxWjdwQzBxNjMwRzZ4QURWZ3k5c20=" );
+    }});
+
+
+
+    // Call to web server
+    $.ajax({
+      dataType: "json",
+      type: 'GET',
+      url: url,
+      success: function(data){
+        console.log(data);
+        /*
+            var sHtml =+ "";
+            $.each(data, function(index){
+                sHtml += "<ul>";
+                sHtml += "<li>"+data[index].tu_id+"</li>";
+                sHtml += "<li>"+data[index].tu_email+"</li>";
+                sHtml += "<li>"+data[index].tu_active+"</li>";
+                sHtml += "</ul>";
+            });
+
+           $(".result").html(sHtml);
+           */
+            
+      }
+    });
+
+   
+
+}//end of method
