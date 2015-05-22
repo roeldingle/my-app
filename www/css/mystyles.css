@@ -1,6 +1,7 @@
-.event.received{background-color: #000;}
+.event.received{background-color: #fff;}
 
 #header{}
+#header .ui-title{font-size:16px;}
 #content{text-align:center;}
 
 

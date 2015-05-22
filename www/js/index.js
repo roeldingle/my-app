@@ -64,8 +64,8 @@ function showPopup(){
 function callWebService(){
 
     //create request url
-    //var url = "http://localhost/phonegapProjects/webservice/my-app.php";
-    var url = "http://api.straightarrowasset.com/sportsace/api/v1/training_statistics";
+    var url = "http://localhost/phonegapProjects/webservice/my-app.php";
+    //var url = "http://api.straightarrowasset.com/sportsace/api/v1/training_statistics";
 
     // Log
     console.log("Request string: " + url);

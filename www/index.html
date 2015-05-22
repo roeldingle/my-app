@@ -27,7 +27,11 @@
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+
+        <link rel="stylesheet" href="css/themes/my-app.css" />
+        <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" /> 
+        <!--<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />-->
         <link rel="stylesheet" type="text/css" href="css/mystyles.css" />
         <title>Hello World</title>
     </head>
@@ -43,15 +47,21 @@
             </div>
             -->
 
-            <div data-role="page" data-theme="b" id="page1" class="event received">
+            <div data-role="page" data-theme="d" id="page1" class="event received">
                 
-                <div data-role="header" data-theme="b" id="header">
+                <div data-role="header" data-theme="d" id="header">
                     <h1>My Super Cool App</h1>
+                    <div data-role="navbar">
+                        <ul>
+                            <li><a href="#page1">Page 1</a></li>
+                            <li><a href="#page2">Page 2</a></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div data-role="content" data-theme="b" id="content">
+                <div data-role="main" class="ui-content" data-theme="d" id="content">
                     <div>
-                        <h1>Products Page</h1>
+                        <h1>Page 1</h1>
                         <img src="img/logo.png" /><br />
 
                         <div data-role="fieldcontain" class="ui-hide-label">
@@ -65,12 +75,41 @@
                 </div>
 
 
-                <div data-role="footer" data-theme="b" class="ui-bar" data-position="fixed" id="footer">
+                <div data-role="footer" data-theme="d" class="ui-bar" data-position="fixed" id="footer">
                     <div data-role="controlgroup" data-type="horizontal">
-                        <a href="index.html" data-role="button" data-icon="search" class="ui-btn-active ui-state-persist">Products</a>
-                        <a href="home.html" data-role="button" data-icon="calendar" class="ui-state-persist">Calendar</a>
-                        <a href="index.html" data-role="button" data-icon="shop" class="ui-state-persist">Orders</a>
-                        <a href="index.html" data-role="button" data-icon="user" class="ui-state-persist">Profile</a>
+                        <a href="#page1" data-role="button" data-icon="search" data-transition="pop" class="ui-btn-active ui-state-persist">Products</a>
+                        <a href="#page2" data-role="button" data-icon="calendar" data-transition="pop" class="ui-state-persist">Calendar</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div data-role="page" data-theme="d" id="page2" class="event received">
+                
+                <div data-role="header" data-theme="d" id="header">
+                    <h1>My Super Cool App</h1>
+                </div>
+
+                <div ata-role="main" class="ui-content" data-theme="d" id="content">
+                    <div>
+                        <h1>Page 2</h1>
+                        <img src="img/logo.png" /><br />
+
+                        <div data-role="fieldcontain" class="ui-hide-label">
+                            <label for="username">Type:</label>
+                            <input type="text" name="txt_sample" id="txt_sample" value="" placeholder="Type anything"/>
+                        </div>
+
+                        <div class="result">sdsd</div>
+                    </div>
+                </div>
+
+
+                <div data-role="footer" data-theme="d" class="ui-bar" data-position="fixed" id="footer">
+                    <div data-role="controlgroup" data-type="horizontal">
+                        <a href="#page1" data-role="button" data-icon="search" data-transition="pop" class="ui-state-persist">Products</a>
+                        <a href="#page2" data-role="button" data-icon="calendar" data-transition="pop" class="ui-btn-active ui-state-persist">Calendar</a>
                     </div>
                 </div>
 
